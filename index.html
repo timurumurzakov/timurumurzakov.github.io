@@ -4,7 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Timur Umurzakov</title>
-  <meta name="description" content="Timur Umurzakov — PhD in Robotics Engineering. Humanoid robotics, control systems, neural networks, and simulation." />
+
+  <meta name="description"
+        content="Timur Umurzakov — PhD in Robotics Engineering. Humanoid robotics, control systems, neural networks, and simulation." />
 
   <style>
     :root{
@@ -14,7 +16,8 @@
       --card: #f9fafb;
       --border: #e5e7eb;
       --link: #2563eb;
-      --shadow: 0 1px 2px rgba(0,0,0,.06), 0 8px 24px rgba(0,0,0,.06);
+      --shadow: 0 1px 2px rgba(0,0,0,.06),
+                0 8px 24px rgba(0,0,0,.06);
     }
 
     @media (prefers-color-scheme: dark){
@@ -29,17 +32,21 @@
       }
     }
 
-    * { box-sizing: border-box; }
+    *{
+      box-sizing: border-box;
+    }
+
     body{
       margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-family: system-ui, -apple-system,
+                   Segoe UI, Roboto, Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
     }
 
     .container{
-      max-width: 980px;
+      max-width: 1100px;
       margin: 0 auto;
       padding: 28px 18px 48px;
     }
@@ -47,51 +54,56 @@
     header{
       display: flex;
       align-items: center;
-      gap: 18px;
-      padding: 18px;
+      gap: 22px;
+      padding: 22px;
       border: 1px solid var(--border);
-      border-radius: 18px;
+      border-radius: 20px;
       background: var(--card);
       box-shadow: var(--shadow);
     }
 
-.avatar{
-  width: 120px;
-  height: 120px;
-  border-radius: 24px;
-  border: 1px solid var(--border);
-  object-fit: cover;
-  flex: 0 0 auto;
-}
+    .avatar{
+      width: 120px;
+      height: 120px;
+      border-radius: 24px;
+      border: 1px solid var(--border);
+      object-fit: cover;
+      flex: 0 0 auto;
+    }
 
     h1{
       margin: 0;
-      font-size: clamp(1.6rem, 3.2vw, 2.2rem);
-      line-height: 1.2;
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      line-height: 1.15;
     }
 
     .subtitle{
       margin: 6px 0 10px;
       color: var(--muted);
-      font-size: 1rem;
+      font-size: 1.05rem;
     }
 
     .links{
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 10px;
+      margin-top: 12px;
     }
 
-    a{ color: var(--link); text-decoration: none; }
-    a:hover{ text-decoration: underline; }
+    a{
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover{
+      text-decoration: underline;
+    }
 
     .btn{
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      padding: 9px 12px;
+      padding: 9px 14px;
       border: 1px solid var(--border);
       border-radius: 999px;
       background: transparent;
@@ -99,10 +111,13 @@
       text-decoration: none;
       font-size: 0.95rem;
       white-space: nowrap;
+      transition: 0.2s ease;
     }
+
     .btn:hover{
       text-decoration: none;
       border-color: rgba(37,99,235,.45);
+      transform: translateY(-1px);
     }
 
     main{
@@ -114,279 +129,367 @@
 
     .card{
       border: 1px solid var(--border);
-      border-radius: 18px;
+      border-radius: 20px;
       background: var(--card);
-      padding: 16px 18px;
+      padding: 18px 20px;
       box-shadow: var(--shadow);
     }
 
     h2{
-      margin: 0 0 10px;
-      font-size: 1.2rem;
+      margin: 0 0 12px;
+      font-size: 1.25rem;
       line-height: 1.3;
+    }
+
+    h3{
+      margin-top: 0;
+      margin-bottom: 6px;
+      font-size: 1rem;
     }
 
     ul{
       margin: 0;
-      padding-left: 18px;
+      padding-left: 20px;
     }
 
-    .muted{ color: var(--muted); }
+    li{
+      margin-bottom: 6px;
+    }
+
+    .muted{
+      color: var(--muted);
+    }
 
     footer{
-      margin-top: 18px;
+      margin-top: 20px;
       color: var(--muted);
       font-size: 0.95rem;
       text-align: center;
     }
 
-    /* Mobile layout */
     @media (max-width: 760px){
-      header{ flex-direction: column; align-items: flex-start; }
-      .avatar{ width: 84px; height: 84px; }
-      main{ grid-template-columns: 1fr; }
-      .container{ padding-top: 18px; }
+
+      header{
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .avatar{
+        width: 90px;
+        height: 90px;
+      }
+
+      main{
+        grid-template-columns: 1fr;
+      }
+
+      .container{
+        padding-top: 18px;
+      }
     }
   </style>
 </head>
 
 <body>
+
   <div class="container">
 
     <header>
-      <!-- Optional: replace this div with your real photo:
-           <img class="avatar" src="photo.jpg" alt="Timur Umurzakov" />
-      -->
-      <img class="avatar" src="Timur_Umurzakov.jpg" alt="Timur Umurzakov" />
+
+      <img class="avatar"
+           src="Timur_Umurzakov.jpg"
+           alt="Timur Umurzakov" />
 
       <div>
+
         <h1>Timur Umurzakov</h1>
-        <div class="subtitle"><strong>PhD in Robotics Engineering</strong></div>
-        <div class="muted">Humanoid robotics • control systems • neural networks • simulation</div>
+
+        <div class="subtitle">
+          <strong>PhD in Robotics Engineering</strong>
+        </div>
+
+        <div class="muted">
+          Humanoid robotics • control systems • neural networks • simulation
+        </div>
 
         <div class="links">
-          <a class="btn" href="mailto:timur.umurzakov@nu.edu.kz">Email</a>
-          <a class="btn" href="https://www.linkedin.com/in/umurzakov/" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn" href="https://orcid.org/0000-0003-2464-8605" target="_blank" rel="noopener">ORCID</a>
-          <a class="btn" href="https://scholar.google.com/citations?user=AvpGTL8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>        
+
+          <a class="btn"
+             href="mailto:timur.umurzakov@nu.edu.kz">
+             Email
+          </a>
+
+          <a class="btn"
+             href="https://www.linkedin.com/in/umurzakov/"
+             target="_blank"
+             rel="noopener">
+             LinkedIn
+          </a>
+
+          <a class="btn"
+             href="https://orcid.org/0000-0003-2464-8605"
+             target="_blank"
+             rel="noopener">
+             ORCID
+          </a>
+
+          <a class="btn"
+             href="https://scholar.google.com/citations?user=AvpGTL8AAAAJ&hl=en"
+             target="_blank"
+             rel="noopener">
+             Google Scholar
+          </a>
+
+          <a class="btn"
+             href="CV_Timur_Umurzakov.pdf"
+             target="_blank"
+             rel="noopener">
+             CV (PDF)
+          </a>
+
         </div>
+
       </div>
+
     </header>
 
     <main>
+
+      <!-- ROW 1 -->
+
       <section class="card">
+
+        <h2>About</h2>
+
+        <p>
+          I am a PhD in Robotics Engineering specializing in humanoid robotics,
+          control systems, neural-network-based modeling, and robotic simulation.
+          My research focuses on energy-efficient humanoid locomotion,
+          compliant actuation, and neural-augmented dynamic modeling.
+        </p>
+
+        <p>
+          I work on the development of lightweight humanoid robots,
+          elastic actuators, and ANN-based control frameworks using
+          simulation platforms such as PyBullet and Isaac Sim.
+        </p>
+
+      </section>
+
+      <section class="card">
+
         <h2>Research Interests</h2>
+
         <ul>
           <li>Humanoid Robotics</li>
           <li>Control Systems</li>
           <li>Artificial Neural Networks</li>
           <li>Simulation (Isaac Sim, PyBullet)</li>
+          <li>Elastic Actuators</li>
+          <li>Robot Dynamics and Control</li>
         </ul>
+
       </section>
 
-        
-      
+      <!-- ROW 2 -->
+
+      <section class="card">
+
+        <h2>Experience</h2>
+
+        <h3>Senior Lecturer, 2026–Present</h3>
+
+        <p class="muted">
+          Astana IT University, Astana, Kazakhstan
+        </p>
+
+        <ul style="margin-bottom: 20px;">
+          <li>Teaching Embedded Systems and Robotics-related courses</li>
+          <li>Developing laboratory assignments and educational materials</li>
+          <li>Supervising student engineering projects</li>
+        </ul>
+
+        <h3>Research Assistant, 2021–2023</h3>
+
+        <p class="muted">
+          Nazarbayev University, Astana, Kazakhstan
+        </p>
+
+        <ul style="margin-bottom: 20px;">
+          <li>Conducted research in humanoid robotics and actuator design</li>
+          <li>Designed simulation environments and control algorithms</li>
+          <li>Designed and integrated control systems for humanoid robotic platforms</li>
+          <li>Performed experimental validation on robotic prototypes</li>
+        </ul>
+
+        <h3>Teaching Assistant, 2020–2021</h3>
+
+        <p class="muted">
+          Nazarbayev University, Astana, Kazakhstan
+        </p>
+
+        <ul style="margin-bottom: 20px;">
+          <li>Supported instruction in robotics and engineering courses</li>
+          <li>Assisted in laboratory sessions and student mentoring</li>
+        </ul>
+
+        <h3>Project Manager, 2011–2014</h3>
+
+        <p class="muted">
+          KPJV Limited, Farnborough, United Kingdom
+        </p>
+
+        <ul>
+          <li>Led international engineering projects in collaboration with global partners</li>
+          <li>Managed project timelines, deliverables, and risk</li>
+        </ul>
+
+      </section>
+
+      <section class="card">
+
+        <h2>Projects</h2>
+
+        <h3>Humanoid Robot (12 DOF Lower Body)</h3>
+
+        <ul style="margin-bottom: 20px;">
+          <li>Achieved stable squat motion using ANN-based control</li>
+          <li>Designed and simulated humanoid robot in PyBullet</li>
+          <li>Implemented ANN-based control strategies</li>
+          <li>Integrated force sensors and IMU for balance control</li>
+        </ul>
+
+        <h3>Hybrid SEA–PEA Actuator</h3>
+
+        <ul>
+          <li>Demonstrated improved modeling accuracy compared to classical methods</li>
+          <li>Designed dual-mode actuator using gearbox backlash</li>
+          <li>Developed ESN-based dynamic model</li>
+          <li>Validated simulation-to-real performance</li>
+        </ul>
+
+      </section>
+
+      <!-- ROW 3 -->
+
+      <section class="card">
+
+        <h2>Publications</h2>
+
+        <ul>
+
+          <li>
+            <strong>T. Umurzakov</strong>, S. Yessirkepov and M. Folgheraiter,
+            "Neural-Augmented Hybrid Dynamic Modeling of a Series-Parallel Elastic Actuator,"
+            <em>IEEE Access</em>, vol. 13, pp. 104630-104650, 2025.
+            DOI:
+            <a href="https://doi.org/10.1109/ACCESS.2025.3580222"
+               target="_blank"
+               rel="noopener">
+               10.1109/ACCESS.2025.3580222
+            </a>
+          </li>
+
+          <li>
+            <strong>T. Umurzakov</strong>, S. Yessirkepov and M. Folgheraiter,
+            "Fast Prototyping and Testing of a New Full Scale Bipedal Robot,"
+            <em>ICRAE 2022</em>, Singapore, 2022.
+          </li>
+
+          <li>
+            S. Yessirkepov, <strong>T. Umurzakov</strong>,
+            R. Shaimerdenov and M. Folgheraiter,
+            "An Elastic Shoulder Joint for Humanoid Robotics Application,"
+            <em>ICARA 2023</em>, Abu Dhabi, UAE, 2023.
+          </li>
+
+          <li>
+            M. Folgheraiter, S. Yessirkepov,
+            <strong>T. Umurzakov</strong> and R. Korabay,
+            "NU-Biped-4 a Lightweight and Low-Power Consumption Full-Size Bipedal Robot,"
+            <em>ICARA 2023</em>, Abu Dhabi, UAE, 2023.
+          </li>
+
+          <li>
+            M. Folgheraiter,
+            <strong>T. Umurzakov</strong> and S. Yessirkepov,
+            "A Servomotor with Adjustable Stiffness for Humanoid Robotics Application,"
+            <em>ACTUATOR 2022</em>, Mannheim, Germany, 2022.
+          </li>
+
+          <li>
+            Yessirkepov, S.; Folgheraiter, M.; Abakov, A.;
+            <strong>Umurzakov, T.</strong>
+            "Development of a Reduced-Degree-of-Freedom (DOF)
+            Bipedal Robot with Elastic Ankles."
+            <em>Robotics</em>, 2024.
+          </li>
+
+          <li>
+            S. Yessirkepov,
+            <strong>T. Umurzakov</strong> and M. Folgheraiter,
+            "Design and Analysis of a Parallel Elastic Shoulder Joint
+            for Humanoid Robotics Application,"
+            <em>IEEE Access</em>, 2025.
+          </li>
+
+          <li>
+            Folgheraiter, M.; Yessirkepov, S.;
+            <strong>Umurzakov, T.</strong>
+            "NU-Biped-4.5: A Lightweight and Low-Prototyping-Cost
+            Full-Size Bipedal Robot."
+            <em>Robotics</em>, 2024.
+          </li>
+
+        </ul>
+
+      </section>
+
       <aside class="card">
+
         <h2>Contact</h2>
-      
-        <p style="margin: 0 0 12px;">
+
+        <p style="margin: 0 0 14px;">
           <strong>Email:</strong><br>
+
           <a href="mailto:timur.umurzakov@nu.edu.kz">
             timur.umurzakov@nu.edu.kz
           </a>
         </p>
-      
-        <p style="margin: 0 0 12px;">
+
+        <p style="margin: 0 0 14px;">
           <strong>ORCID:</strong><br>
-          <a href="https://orcid.org/0000-0003-2464-8605" target="_blank" rel="noopener">
-            0000-0003-2464-8605
+
+          <a href="https://orcid.org/0000-0003-2464-8605"
+             target="_blank"
+             rel="noopener">
+             0000-0003-2464-8605
           </a>
         </p>
-      
-        <p style="margin: 0 0 12px;">
+
+        <p style="margin: 0 0 14px;">
           <strong>Google Scholar:</strong><br>
-          <a href="https://scholar.google.com/citations?user=AvpGTL8AAAAJ&hl=en" target="_blank" rel="noopener">
-            View Profile
+
+          <a href="https://scholar.google.com/citations?user=AvpGTL8AAAAJ&hl=en"
+             target="_blank"
+             rel="noopener">
+             View Profile
           </a>
         </p>
-      
+
         <p style="margin: 0;">
           <strong>ResearchGate:</strong><br>
-          <a href="https://www.researchgate.net/profile/Timur-Umurzakov?ev=hdr_xprf" target="_blank" rel="noopener">
-            View Profile
+
+          <a href="https://www.researchgate.net/profile/Timur-Umurzakov?ev=hdr_xprf"
+             target="_blank"
+             rel="noopener">
+             View Profile
           </a>
         </p>
+
       </aside>
 
-      <section class="card">
-    <h2>About</h2>
-
-    <p>
-      I am a PhD in Robotics Engineering specializing in humanoid robotics,
-      control systems, neural-network-based modeling, and robotic simulation.
-      My research focuses on energy-efficient humanoid locomotion,
-      compliant actuation, and neural-augmented dynamic modeling.
-    </p>
-
-    <p>
-      I work on the development of lightweight humanoid robots,
-      elastic actuators, and ANN-based control frameworks using
-      simulation platforms such as PyBullet and Isaac Sim.
-    </p>
-  </section>
-
-<section class="card">
-  <h2>Experience</h2>
-
-  <h3 style="margin-bottom: 6px;">Senior Lecturer, 2026–Present</h3>
-  <p class="muted" style="margin-top: 0;">
-    Astana IT University, Astana, Kazakhstan
-  </p>
-  <ul style="margin-bottom: 18px;">
-    <li>Teaching Embedded Systems and Robotics-related courses</li>
-    <li>Developing laboratory assignments and educational materials</li>
-    <li>Supervising student engineering projects</li>
-  </ul>
-
-  <h3 style="margin-bottom: 6px;">Research Assistant, 2021–2023</h3>
-  <p class="muted" style="margin-top: 0;">
-    Nazarbayev University, Astana, Kazakhstan
-  </p>
-  <ul style="margin-bottom: 18px;">
-    <li>Conducted research in humanoid robotics and actuator design</li>
-    <li>Designed simulation environments and control algorithms</li>
-    <li>Designed and integrated control systems for humanoid robotic platforms</li>
-    <li>Performed experimental validation on robotic prototypes</li>
-  </ul>
-
-  <h3 style="margin-bottom: 6px;">Teaching Assistant, 2020–2021</h3>
-  <p class="muted" style="margin-top: 0;">
-    Nazarbayev University, Astana, Kazakhstan
-  </p>
-  <ul style="margin-bottom: 18px;">
-    <li>Supported instruction in robotics and engineering courses</li>
-    <li>Assisted in laboratory sessions and student mentoring</li>
-  </ul>
-
-  <h3 style="margin-bottom: 6px;">Project Manager, 2011–2014</h3>
-  <p class="muted" style="margin-top: 0;">
-    KPJV Limited, Farnborough, United Kingdom
-  </p>
-  <ul>
-    <li>Led international engineering projects in collaboration with global partners</li>
-    <li>Managed project timelines, deliverables, and risk</li>
-  </ul>
-</section>
-      
-            <section class="card">
-  <h2>Projects</h2>
-
-  <h3 style="margin-bottom: 8px;">Humanoid Robot (12 DOF Lower Body)</h3>
-  <ul style="margin-bottom: 18px;">
-    <li>Achieved stable squat motion using ANN-based control</li>
-    <li>Designed and simulated humanoid robot in PyBullet</li>
-    <li>Implemented ANN-based control strategies</li>
-    <li>Integrated force sensors and IMU for balance control</li>
-  </ul>
-
-  <h3 style="margin-bottom: 8px;">Hybrid SEA–PEA Actuator</h3>
-  <ul>
-    <li>Demonstrated improved modeling accuracy compared to classical methods</li>
-    <li>Designed dual-mode actuator using gearbox backlash</li>
-    <li>Developed ESN-based dynamic model</li>
-    <li>Validated simulation-to-real performance</li>
-  </ul>
-</section>
-
-      
-<section class="card">
-  <h2>Publications</h2>
-
-  <ul>
-    <li>
-      T. Umurzakov, S. Yessirkepov and M. Folgheraiter,
-      "Neural-Augmented Hybrid Dynamic Modeling of a Series-Parallel Elastic Actuator,"
-      <em>IEEE Access</em>, vol. 13, pp. 104630-104650, 2025.
-      DOI:
-      <a href="https://doi.org/10.1109/ACCESS.2025.3580222" target="_blank" rel="noopener">
-        10.1109/ACCESS.2025.3580222
-      </a>
-    </li>
-
-    <li>
-      T. Umurzakov, S. Yessirkepov and M. Folgheraiter,
-      "Fast Prototyping and Testing of a New Full Scale Bipedal Robot,"
-      <em>2022 7th International Conference on Robotics and Automation Engineering (ICRAE)</em>,
-      Singapore, 2022, pp. 215-221.
-      DOI:
-      <a href="https://doi.org/10.1109/ICRAE56463.2022.10056190" target="_blank" rel="noopener">
-        10.1109/ICRAE56463.2022.10056190
-      </a>
-    </li>
-
-    <li>
-      S. Yessirkepov, T. Umurzakov, R. Shaimerdenov and M. Folgheraiter,
-      "An Elastic Shoulder Joint for Humanoid Robotics Application,"
-      <em>2023 9th International Conference on Automation, Robotics and Applications (ICARA)</em>,
-      Abu Dhabi, UAE, 2023, pp. 117-122.
-      DOI:
-      <a href="https://doi.org/10.1109/ICARA56516.2023.10125796" target="_blank" rel="noopener">
-        10.1109/ICARA56516.2023.10125796
-      </a>
-    </li>
-
-    <li>
-      M. Folgheraiter, S. Yessirkepov, T. Umurzakov and R. Korabay,
-      "NU-Biped-4 a Lightweight and Low-Power Consumption Full-Size Bipedal Robot,"
-      <em>2023 9th International Conference on Automation, Robotics and Applications (ICARA)</em>,
-      Abu Dhabi, UAE, 2023, pp. 38-43.
-      DOI:
-      <a href="https://doi.org/10.1109/ICARA56516.2023.10126025" target="_blank" rel="noopener">
-        10.1109/ICARA56516.2023.10126025
-      </a>
-    </li>
-
-    <li>
-      M. Folgheraiter, T. Umurzakov and S. Yessirkepov,
-      "A Servomotor with Adjustable Stiffness for Humanoid Robotics Application,"
-      <em>ACTUATOR 2022; International Conference and Exhibition on New Actuator Systems and Applications</em>,
-      Mannheim, Germany, 2022.
-    </li>
-
-    <li>
-      Yessirkepov, S.; Folgheraiter, M.; Abakov, A.; Umurzakov, T.
-      "Development of a Reduced-Degree-of-Freedom (DOF) Bipedal Robot with Elastic Ankles."
-      <em>Robotics</em>, 2024, 13, 172.
-      DOI:
-      <a href="https://doi.org/10.3390/robotics13120172" target="_blank" rel="noopener">
-        10.3390/robotics13120172
-      </a>
-    </li>
-
-    <li>
-      S. Yessirkepov, T. Umurzakov and M. Folgheraiter,
-      "Design and Analysis of a Parallel Elastic Shoulder Joint for Humanoid Robotics Application,"
-      <em>IEEE Access</em>, vol. 13, pp. 8761-8778, 2025.
-      DOI:
-      <a href="https://doi.org/10.1109/ACCESS.2025.3527873" target="_blank" rel="noopener">
-        10.1109/ACCESS.2025.3527873
-      </a>
-    </li>
-
-    <li>
-      Folgheraiter, M.; Yessirkepov, S.; Umurzakov, T.
-      "NU-Biped-4.5: A Lightweight and Low-Prototyping-Cost Full-Size Bipedal Robot."
-      <em>Robotics</em>, 2024, 13, 9.
-      DOI:
-      <a href="https://doi.org/10.3390/robotics13010009" target="_blank" rel="noopener">
-        10.3390/robotics13010009
-      </a>
-    </li>
-  </ul>
-</section>
-
-      
-
+    </main>
 
     <footer>
       © <span id="year"></span> Timur Umurzakov
@@ -395,7 +498,9 @@
   </div>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
   </script>
+
 </body>
 </html>
